@@ -1,0 +1,4 @@
+/subscriptions.local.json
+/*.tmp
+/MarketAdvisor.source.lua
+/__pycache__/

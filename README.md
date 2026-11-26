@@ -1,2 +1,18 @@
-# market-advisor
-Market Advisor for MoonLoader and its subscription registry
+# Market Advisor
+
+Lua-скрипт для MoonLoader с подбором предложений ArzMarket и доступом по подписке.
+
+## Игроку
+
+Скачайте **MarketAdvisor.lua** и поместите его в папку MoonLoader. Откройте **/crrmt** и введите имя и код, полученные от администратора. Скрипт использует выгрузки ArzMarket на компьютере.
+
+## Администратору
+
+- Выдать подписку — `python subscriptions.py issue "Player_Name" 2027-01-31`
+- Изменить имя — `python subscriptions.py rename ID "New_Name"`
+- Продлить — `python subscriptions.py extend ID 2027-02-28`
+- Отозвать — `python subscriptions.py revoke ID`
+
+Запускайте команды локально из папки репозитория. После изменения публикуйте **subscriptions.json** в ветке **main**. Даты действуют включительно по UTC. Смена имени сохраняет прежний код активации.
+
+Храните **subscriptions.local.json** и резервную копию локально. Публичный реестр содержит хеши и сроки действия. Скрипт периодически перепроверяет подписку через HTTPS. Проверка в редактируемом Lua рассчитана на обычное управление доступом.
